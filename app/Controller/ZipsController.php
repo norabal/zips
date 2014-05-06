@@ -29,20 +29,20 @@ class ZipsController extends AppController {
             $fileName = '/Applications/MAMP/htdocs/zips/vendors/KEN_ALL.CSV';
 
 
-            $zip = new ZipArchive();
-
-            // ZIPファイルをオープン˙
-            $res = $zip->open($up_file);
-
-            // zipファイルのオープンに成功した場合
-            if ($res === true) {
-
-                // 圧縮ファイル内の全てのファイルを指定した解凍先に展開する
-                $zip->extractTo('/Applications/MAMP/htdocs/zips/vendors/');
-
-                // ZIPファイルをクローズ
-                $zip->close();
-            }
+//            $zip = new ZipArchive();
+//
+//            // ZIPファイルをオープン˙
+//            $res = $zip->open($up_file);
+//
+//            // zipファイルのオープンに成功した場合
+//            if ($res === true) {
+//
+//                // 圧縮ファイル内の全てのファイルを指定した解凍先に展開する
+//                $zip->extractTo('/Applications/MAMP/htdocs/zips/vendors/');
+//
+//                // ZIPファイルをクローズ
+//                $zip->close();
+//            }
 
 
 
