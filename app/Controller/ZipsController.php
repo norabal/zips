@@ -116,4 +116,19 @@ class ZipsController extends AppController {
         }
     }
 
+    public function add() {
+        if ($this->request->is('post')) {
+            try {
+                $this->Zip->create();
+                $this->Zip->save($this->request->data);
+            } catch (Exception $e) {
+                $this->log($e->getMessage());
+                throw $e;
+            }
+            $this->Session->setFlash('登録しました');
+            return $this->redirect(array('action' => 'index'));
+            exit;
+        }
+        return $this->redirect(array('action' => 'index'));
+    }
 }
